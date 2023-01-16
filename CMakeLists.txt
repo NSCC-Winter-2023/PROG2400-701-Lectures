@@ -9,3 +9,6 @@ add_executable(best_practices
         best_practices/student.cpp)
 add_executable(EDIT command_line/main.cpp)
 add_executable(commands commands/main.cpp)
+add_executable(dynamic_arrays dynamic_arrays/main.cpp
+        dynamic_arrays/DynamicArray.cpp)
+add_executable(linked_lists linked_lists/main.cpp)

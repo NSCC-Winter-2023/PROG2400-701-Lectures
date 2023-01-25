@@ -12,6 +12,14 @@ private:
     int m_size{0};
 public:
     LinkedList() {}
+    virtual ~LinkedList() {
+        auto node = m_start;
+        while (node != nullptr) {
+            auto temp = node;
+            node = node->m_next;
+            delete temp;
+        }
+    }
 
     void add(int num) {
         // create a new node

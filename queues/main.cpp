@@ -44,12 +44,12 @@ public:
         if (m_first == nullptr) {
             // first node
             m_first = std::move(node);
+            m_last = m_first.get();
         } else {
             // add to existing linked list
             m_last->m_next = std::move(node);
+            m_last = m_last->m_next.get();
         }
-
-        m_last = node.get();
     }
 
     int peek() {
@@ -70,7 +70,7 @@ public:
         }
 
         // detach node
-        m_first = std::move(m_first->m_next);
+        m_first = std::move(node->m_next);
 
         // hold data for return
         int data = node->m_data;

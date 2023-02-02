@@ -13,3 +13,4 @@ add_executable(dynamic_arrays dynamic_arrays/main.cpp
         dynamic_arrays/DynamicArray.cpp)
 add_executable(linked_lists linked_lists/main.cpp)
 add_executable(queues queues/main.cpp)
+add_executable(stacks stacks/main.cpp)
